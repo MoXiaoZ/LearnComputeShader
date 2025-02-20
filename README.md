@@ -7,4 +7,4 @@
 * 在.uproject中将ExampleComputeShader模块的"LoadingPhase"对应的值改为"PostConfigInit"，因为GlobalShader的模块要在引擎完全初始化之前加载，配置系统初始化后立即加载。
 * 添加虚拟路径时AddShaderSourceDirectoryMapping的参数/MyShader改成/MyShaders，因为原来的代码有的加s了，有的没加，统一加s
 * 添加第2个模块时（ShaderFunctionLibraryModule）要加宏IMPLEMENT_MODULE
-* shader中\[numthreads(64, 64, 64)\]改成\[numthreads(32, 32, 1)\]，线程数乘积（总线程数）不能超过1024
+* shader中\[numthreads(64, 64, 64)\]改成\[numthreads(32, 32, 1)\]，线程数乘积不能超过1024
